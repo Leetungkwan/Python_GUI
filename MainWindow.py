@@ -13,7 +13,7 @@ WIDTH = 1000
 class MainWindow:
     def __init__(self, window):
         self.window = window
-        self.window.title("工具能手软件")
+        self.window.title("网络生活助手软件")
         self.canvas1 = tk.Canvas(self.window, height=HEIGHT, width=WIDTH)
         self.canvas1.pack()
 

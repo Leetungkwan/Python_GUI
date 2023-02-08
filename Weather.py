@@ -51,12 +51,15 @@ class Weather:
 					city = result['result']['City']
 					print('城市：%s\n' % (city))
 				else:
-					print("请求失败:%s %s" % (result['error_code'], result['reason']))
+					self.L1['text'] = 'IP归属地请求失败，无法查询该城市'
+					# print("IP归属地请求失败:%s %s" % (result['error_code'], result['reason']))
 			except Exception as e:
-				print("解析结果异常：%s" % e)
+				self.L1['text'] = 'IP归属地解析结果异常'
+				# print("解析结果异常：%s" % e)
 		else:
 			# 可能网络异常等问题，无法获取返回内容，请求异常
-			print("请求异常")
+			self.L1['text'] = 'IP归属地请求异常'
+			# print("请求异常")
 		return city
 
 
@@ -86,23 +89,29 @@ class Weather:
 						direct = result['result']['realtime']['direct']
 						power = result['result']['realtime']['power']
 						aqi = result['result']['realtime']['aqi']
-						print("温度：%s\n湿度：%s\n天气：%s\n天气标识：%s\n风向：%s\n风力：%s\n空气质量：%s" % (
-							temperature, humidity, info, wid, direct, power, aqi))
+						# print("温度：%s\n湿度：%s\n天气：%s\n天气标识：%s\n风向：%s\n风力：%s\n空气质量：%s" % (
+						# 	temperature, humidity, info, wid, direct, power, aqi))
+						self.L1['text'] = "温度：%s\n湿度：%s\n天气：%s\n天气标识：%s\n风向：%s\n风力：%s\n空气质量：%s" % (
+							temperature, humidity, info, wid, direct, power, aqi)
 					else:
-						print("请求失败:%s %s" % (result['error_code'], result['reason']))
+						# print("请求失败:%s %s" % (result['error_code'], result['reason']))
+						self.L1['text'] = "天气请求失败:%s %s" % (result['error_code'], result['reason'])
 				except Exception as e:
-					print("解析结果异常：%s" % e)
+					self.L1['text'] = "天气解析结果异常：%s" % e
+					# print("解析结果异常：%s" % e)
 			else:
 				# 可能网络异常等问题，无法获取返回内容，请求异常
-				print("请求异常")
+				# print("请求异常")
+				self.L1['text'] = "天气请求异常"
 		except urllib.error.HTTPError as err:
-			print(err)
+			# print(err)
+			self.L1['text'] = "天气url请求失败：%s" % err
 		except urllib.error.URLError as err:
 			# 其他异常
-			print(err)
+			# print(err)
+			self.L1['text'] = "天气url请求失败：%s" % err
 
-		self.L1['text'] = "温度：%s\n湿度：%s\n天气：%s\n天气标识：%s\n风向：%s\n风力：%s\n空气质量：%s" % (
-			temperature, humidity, info, wid, direct, power, aqi)
+
 
 	# 用当前城市数据初始化信息框
 	def get_init_weather(self, city):
@@ -130,22 +139,28 @@ class Weather:
 						direct = result['result']['realtime']['direct']
 						power = result['result']['realtime']['power']
 						aqi = result['result']['realtime']['aqi']
-						print("温度：%s\n湿度：%s\n天气：%s\n天气标识：%s\n风向：%s\n风力：%s\n空气质量：%s" % (
-							temperature, humidity, info, wid, direct, power, aqi))
+						# print("温度：%s\n湿度：%s\n天气：%s\n天气标识：%s\n风向：%s\n风力：%s\n空气质量：%s" % (
+							# temperature, humidity, info, wid, direct, power, aqi))
+						self.L1['text'] = "温度：%s\n湿度：%s\n天气：%s\n天气标识：%s\n风向：%s\n风力：%s\n空气质量：%s" % (
+							temperature, humidity, info, wid, direct, power, aqi)
 					else:
-						print("请求失败:%s %s" % (result['error_code'], result['reason']))
+						# print("请求失败:%s %s" % (result['error_code'], result['reason']))
+						self.L1['text'] = "天气请求失败:%s %s" % (result['error_code'], result['reason'])
 				except Exception as e:
-					print("解析结果异常：%s" % e)
+					# print("解析结果异常：%s" % e)
+					self.L1['text'] = "天气解析结果异常：%s" % e
 			else:
 				# 可能网络异常等问题，无法获取返回内容，请求异常
-				print("请求异常")
+				self.L1['text'] = "天气请求异常"
+				# print("请求异常")
 		except urllib.error.HTTPError as err:
-			print(err)
+			self.L1['text'] = "天气url异常：%s" % err
+			# print(err)
 		except urllib.error.URLError as err:
+			self.L1['text'] = "天气url异常：%s" % err
 			# 其他异常
-			print(err)
-		self.L1['text'] = "温度：%s\n湿度：%s\n天气：%s\n天气标识：%s\n风向：%s\n风力：%s\n空气质量：%s" % (
-							temperature, humidity, info, wid, direct, power, aqi)
+			# print(err)
+
 # 测试函数
 if __name__ == '__main__':
 	window = tk.Tk()
