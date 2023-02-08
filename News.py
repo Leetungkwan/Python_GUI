@@ -255,14 +255,14 @@ class News:
 					# print(data)
 				else:
 					# print("请求失败:%s %s" % (result['error_code'], result['reason']))
-					self.L1['text'] = "新闻请求失败:%s %s" % (result['error_code'], result['reason'])
+					self.L1['text'] = "新闻请求失败:\n错误代码为:%s\n%s错误原因为:\n" % (result['error_code'], result['reason'])
 			except Exception as e:
-				self.L1['text'] = "新闻解析结果异常：%s" % e
+				self.L1['text'] = "新闻解析结果异常：\n%s" % e
 				# print("解析结果异常：%s" % e)
 		else:
 			# 可能网络异常等问题，无法获取返回内容，请求异常
 			# print("请求异常")
-			self.L1['text'] = "新闻请求异常"
+			self.L1['text'] = "新闻请求异常\n"
 
 
 	# 新闻显示函数(首页和下一页)
@@ -290,15 +290,15 @@ class News:
 					self.L1['text'] = self.format_news_next(result)
 					# print(data)
 				else:
-					self.L1['text'] = "新闻请求失败:%s %s" % (result['error_code'], result['reason'])
+					self.L1['text'] = "新闻请求失败:\n错误代码为:%s\n错误原因为:%s\n" % (result['error_code'], result['reason'])
 					# print("请求失败:%s %s" % (result['error_code'], result['reason']))
 			except Exception as e:
-				self.L1['text'] = "新闻解析结果异常：%s" % e
+				self.L1['text'] = "新闻解析结果异常：\n%s" % e
 				# print("解析结果异常：%s" % e)
 		else:
 			# 可能网络异常等问题，无法获取返回内容，请求异常
 			# print("请求异常")
-			self.L1['text'] = "新闻请求异常"
+			self.L1['text'] = "新闻请求异常\n"
 
 	# 测试函数(因为api每日有限制次数)
 	def test(self):

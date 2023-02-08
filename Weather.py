@@ -51,14 +51,14 @@ class Weather:
 					city = result['result']['City']
 					print('城市：%s\n' % (city))
 				else:
-					self.L1['text'] = 'IP归属地请求失败，无法查询该城市'
+					self.L1['text'] = 'IP归属地请求失败，无法查询该城市\n'
 					# print("IP归属地请求失败:%s %s" % (result['error_code'], result['reason']))
 			except Exception as e:
-				self.L1['text'] = 'IP归属地解析结果异常'
+				self.L1['text'] = 'IP归属地解析结果异常\n'
 				# print("解析结果异常：%s" % e)
 		else:
 			# 可能网络异常等问题，无法获取返回内容，请求异常
-			self.L1['text'] = 'IP归属地请求异常'
+			self.L1['text'] = 'IP归属地请求异常\n'
 			# print("请求异常")
 		return city
 
@@ -66,8 +66,8 @@ class Weather:
 	# 查询某城市的天气
 	def get_weather(self,city):
 		api_url = 'http://apis.juhe.cn/simpleWeather/query'
-		if city == '':
-			self.L1['text'] = '输入不能为空'
+		# if city == '':
+		# 	self.L1['text'] = '输入不能为空'
 		params_weather_dict = {
 			"city": city,  # 查询天气的城市名称，如：北京、苏州、上海
 			"key": "4b41866c4023f4e84a96c37bd844b384",  # 申请的接口API接口请求Key
@@ -95,9 +95,9 @@ class Weather:
 							temperature, humidity, info, wid, direct, power, aqi)
 					else:
 						# print("请求失败:%s %s" % (result['error_code'], result['reason']))
-						self.L1['text'] = "天气请求失败:%s %s" % (result['error_code'], result['reason'])
+						self.L1['text'] = "天气请求失败:\n错误代码为:%s\n错误原因为:%s\n" % (result['error_code'], result['reason'])
 				except Exception as e:
-					self.L1['text'] = "天气解析结果异常：%s" % e
+					self.L1['text'] = "天气解析结果异常：%s\n" % e
 					# print("解析结果异常：%s" % e)
 			else:
 				# 可能网络异常等问题，无法获取返回内容，请求异常
@@ -105,11 +105,11 @@ class Weather:
 				self.L1['text'] = "天气请求异常"
 		except urllib.error.HTTPError as err:
 			# print(err)
-			self.L1['text'] = "天气url请求失败：%s" % err
+			self.L1['text'] = "天气url请求失败：%s\n" % err
 		except urllib.error.URLError as err:
 			# 其他异常
 			# print(err)
-			self.L1['text'] = "天气url请求失败：%s" % err
+			self.L1['text'] = "天气url请求失败：%s\n" % err
 
 
 
@@ -145,19 +145,19 @@ class Weather:
 							temperature, humidity, info, wid, direct, power, aqi)
 					else:
 						# print("请求失败:%s %s" % (result['error_code'], result['reason']))
-						self.L1['text'] = "天气请求失败:%s %s" % (result['error_code'], result['reason'])
+						self.L1['text'] = "天气请求失败:\n错误代码为:%s\n错误原因为:%s\n" % (result['error_code'], result['reason'])
 				except Exception as e:
 					# print("解析结果异常：%s" % e)
-					self.L1['text'] = "天气解析结果异常：%s" % e
+					self.L1['text'] = "天气解析结果异常：%s\n" % e
 			else:
 				# 可能网络异常等问题，无法获取返回内容，请求异常
-				self.L1['text'] = "天气请求异常"
+				self.L1['text'] = "天气请求异常\n"
 				# print("请求异常")
 		except urllib.error.HTTPError as err:
-			self.L1['text'] = "天气url异常：%s" % err
+			self.L1['text'] = "天气url异常：%s\n" % err
 			# print(err)
 		except urllib.error.URLError as err:
-			self.L1['text'] = "天气url异常：%s" % err
+			self.L1['text'] = "天气url异常：%s\n" % err
 			# 其他异常
 			# print(err)
 
