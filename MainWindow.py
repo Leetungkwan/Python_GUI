@@ -86,6 +86,7 @@ class MainWindow:
         '''添加日历头'''
         # 得到当前的日期，设置为默认值
         now = time.localtime(time.time())
+        # print(now)
         col_idx = 0
 
         # 创建年份组件
