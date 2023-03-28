@@ -9,7 +9,7 @@
   <img width="500" src="./README.assets/image-20230328151442698.png" />
 
 ## Start
-Put the folder in your native and select your common IDE to open.  
+Download the project in your native and select your common IDE to open.  
 `git clone https://github.com/Leetungkwan/Python_GUI`  
 
 ## Install
