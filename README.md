@@ -9,16 +9,16 @@
   <img width="500" src="./README.assets/image-20230328151442698.png" />
 
 ## Start
-
-`git clone https://github.com/Leetungkwan/Python_GUI`
-Put the folder in your native and select your common IDE to open.
+Put the folder in your native and select your common IDE to open.  
+`git clone https://github.com/Leetungkwan/Python_GUI`  
 
 ## Install
+Install the only necessary package  
 `pip install tkinter`
-Install the only necessary package
+
 
 ## Usage
-run the `MainWindow.py` and you will find this software is entire friendly
+run the `MainWindow.py` , and you will find this software is entire friendly
 
 ## Demo
 
