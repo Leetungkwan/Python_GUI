@@ -1,6 +1,6 @@
 ## Introduce
 
-1. I come across build a good idea that design a GUI which contain the basic functions when I use the network. 
+1. I come across a good idea that design a GUI which contain the basic functions when I use the network. 
 2. I survey seven API company, test their usability. Finally I choose three company and seven API. 
 3. In order to reduce learning cost, I decide to use tkinter package rather than PyQT.
 4. The GUI just a software which is integrated by various API.
