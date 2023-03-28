@@ -5,7 +5,7 @@
 3. In order to reduce learning cost, I decide to use tkinter package rather than PyQT.
 4. The GUI just a software which is integrated by various API.
 
-![image-20230328151442698](./README.assets/image-20230328151442698.png)
+<img src="./README.assets/image-20230328151442698.png" alt="image-20230328151442698" style="zoom:50%;" />
 
 ## Start
 
@@ -21,7 +21,7 @@ run the `MainWindow.py` and you will find this software is entire friendly
 
 ## Demo
 
-<iframe src="//player.bilibili.com/player.html?aid=949337463&bvid=BV18s4y1a7ZS&cid=1007992215&page=1" scrolling="no" border="10" frameborder="no" framespacing="0" allowfullscreen="true" height="550" width="10" > </iframe>
+- [*使用tinter包开发的软件介绍*](https://www.bilibili.com/video/BV18s4y1a7ZS/?share_source=copy_web&vd_source=723a64ac7cca4aa2535cb5b6f70d07ce)
 
 ## Version
 
