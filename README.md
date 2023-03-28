@@ -5,7 +5,8 @@
 3. In order to reduce learning cost, I decide to use tkinter package rather than PyQT.
 4. The GUI just a software which is integrated by various API.
 
-<img src="./README.assets/image-20230328151442698.png" alt="image-20230328151442698" style="zoom:50%;" />
+<p align="left">
+  <img width="500" src="./README.assets/image-20230328151442698.png" />
 
 ## Start
 
