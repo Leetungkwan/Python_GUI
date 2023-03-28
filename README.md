@@ -22,9 +22,9 @@ run the `MainWindow.py` , and you will find this software is entire friendly
 
 ## Demo
 
-- [*使用tinter包开发的软件介绍*](https://www.bilibili.com/video/BV18s4y1a7ZS/?share_source=copy_web&vd_source=723a64ac7cca4aa2535cb5b6f70d07ce)
+- [**使用tinter包开发的软件介绍**](https://www.bilibili.com/video/BV18s4y1a7ZS/?share_source=copy_web&vd_source=723a64ac7cca4aa2535cb5b6f70d07ce)
 
 ## Version
 
 - V1.0  finish the basic functions        2023/2/8
-- V2.0  add other language(English) version  <u>*DOING NOW*</u>
+- V2.0  add other language(English) version  <u>**DOING NOW**</u>
