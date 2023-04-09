@@ -1,6 +1,6 @@
 <div align="center">
   <h1>Network life assistant software</h1>
-  <h4>🇺🇸 <a href="./README.md">English</a> | 🇨🇳 <a href="./README-zh.md">中文</a></h4>
+  <h4>🇺🇸 <a href="./README.md">English</a> | 🇨🇳 <a href="./README-zh.md">简体中文</a></h4>
 </div>
 
 ## Introduce the Tkinter
